@@ -54,17 +54,13 @@ ARCHITECTURE behavior OF Addertestbench IS
    signal cin : std_logic := '0';
    signal A : std_logic_vector(3 downto 0) := (others => '0');
    signal B : std_logic_vector(3 downto 0) := (others => '0');
-
  	--Outputs
    signal S : std_logic_vector(3 downto 0);
    signal Cout : std_logic;
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
- 
 
- 
 BEGIN
- 
 	-- Instantiate the Unit Under Test (UUT)
    uut: ADDER PORT MAP (
           cin => cin,
@@ -73,18 +69,10 @@ BEGIN
           S => S,
           Cout => Cout
         );
-
-   
- 
-
 process
    begin
-
-
 x1: For i in 1 to 15 loop
-
 	A <= conv_std_logic_vector(i,4);
-	
 	x2:For i in 1 to 15 loop
 	B <= conv_std_logic_vector(i,4);
 	wait for 10 ns;
